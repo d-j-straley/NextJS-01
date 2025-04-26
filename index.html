@@ -1,21 +1,13 @@
 <html>
     <body>
         <div id="app"></div>
-        <script type="text/javascript">
-            const app = document.getElementById('app');
-
-            // Create a new H1 element
-            const header = document.createElement('h1');
-
-            // create a new text node for the H1 element
-            const text = 'Develop. Preview. Ship.';
-            const headerContent = document.createTextNode(text);
-
-            // Append the text node to the H1 element
-            header.appendChild(headerContent);
-
-            // place the H1 element inside the div
-            app.appendChild(header);
+        <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <script type="text/jsx">
+            const domNode = document.getElementById('app');
+            const root = ReactDOM.createRoot(domNode);
+            root.render(<h1>Develop. Preview. And Ship.</h1>);
         </script>
         
     </body>
