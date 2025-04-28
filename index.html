@@ -13,8 +13,10 @@ function Header({title}) {
 
             function HomePage() {
                 const names = ["Jodi", "Lori", "Carol"];
+                const [count, setCount] = React.useState(0);
 
                 function handleClick() {
+                    setCount(count + 1);
                     console.log("Button clicked!");
                 }
 
@@ -26,7 +28,7 @@ function Header({title}) {
                                 return <li key={index}>{name}</li>;
                             })}
                         </ul>
-                        <button onClick={handleClick}>Like</button>
+                        <button onClick={handleClick}>Like ({count})</button>
                     </div>
                 );
             }
