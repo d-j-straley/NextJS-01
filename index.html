@@ -4,17 +4,18 @@
         <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
         <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
         <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-        <script type="text/jsx">
+        <script type="text/babel">
           
-            function Header({title}) {
-                console.log(title);
-                return (<h1>{title}</h1>);
+            function Header(props) {
+                // console.log(title);
+                return (<h1>{props.title}</h1>);
             }
 
             function HomePage() {
                 return (
                     <div>
                         <Header title="React"/>
+                        <p>Welcome to the React application!</p> {/* Added a welcome message */}
                     </div>
                 );
             }
