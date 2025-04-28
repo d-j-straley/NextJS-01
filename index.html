@@ -6,49 +6,21 @@
         <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
         <script type="text/babel">
           
-            // function Header(props) {
-            //     // console.log(title);
-            //     return (<h1>{props.title}</h1>);
-            // }
-
-            // function Header({ title }) {
-            //     return <h1>{`Cool ${title}`}</h1>;
-            // }
-
-// function Header({ title }) {
-//                 return <h1>{createTitle(title)}</h1>;
-//             }   
 
 function Header({title}) {
                 return <h1>{title ? title: 'Default Title'}</h1>;
             }
 
-            // // this is a function which will return a value which will then be passed to the Header component
-            // function createTitle(title) {
-            //     if(title === undefined) {
-            //         return "No title provided";
-            //     } else if (title === "") {
-            //         return "Title is empty";
-            //     } else if (title.length < 5) {
-            //         return "Title is too short";
-            //     } else if (title.length >= 5 && title.length <= 10) {
-            //         return "Title length is just right; it is: " + title
-            //     }
-            //     else if (title.length > 10) {
-            //         return "Title is too long";
-            //     } else {
-            //         return title;
-            //     }
-            // }
-
-
             function HomePage() {
+                const names = ["Jodi", "Lori", "Carol"];
                 return (
                     <div>
-                        <Header title="1st Title: React 101"/>
-                        <Header title="2nd Title : React is awesome!"/>
-                        <Header />
-                        <p>Welcome to the React application!</p> {/* Added a welcome message */}
+                        <Header title="We're gonna win this war."/>
+                        <ul>
+                            {names.map((name, index) => {
+                                return <li key={index}>{name}</li>;
+                            })}
+                        </ul>
                     </div>
                 );
             }
