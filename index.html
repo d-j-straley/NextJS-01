@@ -6,10 +6,17 @@
         <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
         <script type="text/babel">
           
-            function Header(props) {
-                // console.log(title);
-                return (<h1>{props.title}</h1>);
+            // function Header(props) {
+            //     // console.log(title);
+            //     return (<h1>{props.title}</h1>);
+            // }
+
+            function Header({ title }) {
+                return <h1>{`Cool ${title}`}</h1>;
             }
+
+
+
 
             function HomePage() {
                 return (
