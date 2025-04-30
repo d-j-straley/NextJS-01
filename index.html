@@ -5,11 +5,12 @@
         <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
         <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
         <script type="text/babel">
+            const app = document.getElementById('app');
           
 
-function Header({title}) {
-                return <h1>{title ? title: 'Default Title'}</h1>;
-            }
+            function Header({title}) {
+                            return <h1>{title ? title: 'Default Title'}</h1>;
+                        }
 
             function HomePage() {
                 const names = ["Jodi", "Lori", "Carol"];
@@ -34,7 +35,7 @@ function Header({title}) {
             }
 
 
-            const root = ReactDOM.createRoot(document.getElementById('app'));
+            const root = ReactDOM.createRoot(app);
             root.render(<HomePage />);
         </script>
         
